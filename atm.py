@@ -1,9 +1,11 @@
 print("Welcome to the ATM!")
 
+# user info 
 usrnme = "Anas Hussain"
 pin = 1908
 balance = 1000
 
+# Asking the user to input pin
 ask_pin = int(input("Enter your pin: "))
 if ask_pin != pin:
     print("Wrong pin!")
@@ -12,6 +14,7 @@ if ask_pin != pin:
 print("Correct pin!")
 print("Welcome 'Anas Hussain' ")
 
+# Defined functions of (Withdrawal,Deposit,Balance check)
 def withdrawal(amount):
     global balance 
     if amount <= balance:
@@ -29,11 +32,10 @@ def check_balance():
     global balance
     return f"Your balance: {balance}"
 
-
+# ATM defined function
 def ATM():
     while True:
 
-        
         print("Options: ")
         print("1) Deposit.")
         print("2) Withdrawal.")
@@ -57,7 +59,7 @@ def ATM():
 
         if not ask_again():
             break
-
+# Asking the user if he/she wants to perform another task
 def ask_again():
     choice = input ("Want to perform another task? (yes/no): ").strip().lower()
     return choice == "yes"
