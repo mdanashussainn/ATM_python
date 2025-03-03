@@ -59,6 +59,8 @@ def ATM():
 
         if not ask_again():
             break
+
+        
 # Asking the user if he/she wants to perform another task
 def ask_again():
     choice = input ("Want to perform another task? (yes/no): ").strip().lower()
